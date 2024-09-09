@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 import argparse
 from ldap3 import Server, Connection, ALL, Tls
 import ssl
@@ -256,7 +257,7 @@ def main():
     # Connection details window
     connection_window = tk.Tk()
     connection_window.title("LDAP Connection Details")
-    connection_window.geometry("400x300")
+    connection_window.geometry("400x375")
 
     # Server address
     ttk.Label(connection_window, text="Server Address:").pack(pady=5)
@@ -268,7 +269,7 @@ def main():
     ttk.Label(connection_window, text="Username:").pack(pady=5)
     username_entry = ttk.Entry(connection_window)
     username_entry.pack(pady=5)
-    username_entry.insert(0, 'your_username')
+    username_entry.insert(0, 'your_username@domain')
 
     # Password
     ttk.Label(connection_window, text="Password:").pack(pady=5)
